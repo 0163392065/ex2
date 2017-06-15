@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.choa.util.PageMaker;
@@ -15,6 +16,11 @@ public class NoticeService {
 	
 	@Inject
 	private NoticeDAO noticeDAO;
+	
+	public void test(){
+		
+		System.out.println("noticeDAO : "+noticeDAO);
+	}
 	
 	/*//Constructor
 	public NoticeService(NoticeDAO noticeDAO) {
